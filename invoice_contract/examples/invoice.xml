@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+  <cbc:ID>INV-DEMO-01</cbc:ID><cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+  <cac:OrderReference><cbc:ID>PO-DEMO-01</cbc:ID></cac:OrderReference>
+  <cac:AccountingSupplierParty><cac:Party><cac:PartyIdentification><cbc:ID schemeID="demo">supplier-01</cbc:ID></cac:PartyIdentification></cac:Party></cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty><cac:Party><cac:PartyIdentification><cbc:ID schemeID="demo">buyer-01</cbc:ID></cac:PartyIdentification></cac:Party></cac:AccountingCustomerParty>
+  <cac:LegalMonetaryTotal><cbc:LineExtensionAmount currencyID="EUR">50.80</cbc:LineExtensionAmount></cac:LegalMonetaryTotal>
+  <cac:InvoiceLine><cbc:ID>1</cbc:ID><cbc:InvoicedQuantity unitCode="EA">4</cbc:InvoicedQuantity><cbc:LineExtensionAmount currencyID="EUR">50.80</cbc:LineExtensionAmount><cac:OrderLineReference><cbc:LineID>10</cbc:LineID></cac:OrderLineReference><cac:Item><cac:SellersItemIdentification><cbc:ID>micro-pump</cbc:ID></cac:SellersItemIdentification></cac:Item><cac:Price><cbc:PriceAmount currencyID="EUR">12.70</cbc:PriceAmount><cbc:BaseQuantity unitCode="EA">1</cbc:BaseQuantity></cac:Price></cac:InvoiceLine>
+</Invoice>

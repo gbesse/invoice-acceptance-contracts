@@ -1,0 +1,7 @@
+{
+  "synthetic": true,
+  "order": {"id":"PO-DEMO-01","currency":"EUR","buyer":{"scheme":"demo","value":"buyer-01"},"seller":{"scheme":"demo","value":"supplier-01"},"lines":[{"id":"10","sku":"micro-pump","unit":"EA","quantity":"10","unit_price":"12.50","billing_basis":"received","previous_billed_quantity":"2"}]},
+  "invoice": {"id":"INV-DEMO-01","order_ref":"PO-DEMO-01","currency":"EUR","buyer":{"scheme":"demo","value":"buyer-01"},"seller":{"scheme":"demo","value":"supplier-01"},"lines":[{"id":"1","order_line_id":"10","sku":"micro-pump","unit":"EA","quantity":"4","unit_price":"12.70","line_total":"50.80"}],"line_subtotal":"50.80"},
+  "receipts": [{"id":"RECEIPT-DEMO-01","order_line_id":"10","unit":"EA","status":"accepted","quantity":"3"}],
+  "seen_invoices": []
+}

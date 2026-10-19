@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoice-acceptance-contracts"
+version = "0.1.0a1"
+description = "Contrats acheteur pour factures · Buyer invoice contracts · Contratos de factura del comprador"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[project.scripts]
+invoice-contract = "invoice_contract.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["invoice_contract*"]
+
+[tool.setuptools.package-data]
+invoice_contract = ["web/*", "examples/*"]
