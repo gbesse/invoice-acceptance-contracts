@@ -1,0 +1,116 @@
+{
+  "status": "draft_ready_for_review",
+  "snapshot_sha256": "e56add60bb3eb1256b31c25700dd6e3831e992d9d42c16b7dfba666557fe09eb",
+  "changes": [
+    {
+      "line": "1",
+      "field": "quantity",
+      "before": "4",
+      "after": "1",
+      "sources": [
+        "INV-DEMO-01:1",
+        "PO-DEMO-01:10",
+        "RECEIPT-DEMO-01"
+      ]
+    },
+    {
+      "line": "1",
+      "field": "unit_price",
+      "before": "12.70",
+      "after": "12.50",
+      "sources": [
+        "INV-DEMO-01:1",
+        "PO-DEMO-01:10",
+        "RECEIPT-DEMO-01"
+      ]
+    }
+  ],
+  "draft": {
+    "synthetic": true,
+    "order": {
+      "id": "PO-DEMO-01",
+      "currency": "EUR",
+      "buyer": {
+        "scheme": "demo",
+        "value": "buyer-01"
+      },
+      "seller": {
+        "scheme": "demo",
+        "value": "supplier-01"
+      },
+      "lines": [
+        {
+          "id": "10",
+          "sku": "micro-pump",
+          "unit": "EA",
+          "quantity": "10",
+          "unit_price": "12.50",
+          "billing_basis": "received",
+          "previous_billed_quantity": "2"
+        }
+      ]
+    },
+    "invoice": {
+      "id": "INV-DEMO-01",
+      "order_ref": "PO-DEMO-01",
+      "currency": "EUR",
+      "buyer": {
+        "scheme": "demo",
+        "value": "buyer-01"
+      },
+      "seller": {
+        "scheme": "demo",
+        "value": "supplier-01"
+      },
+      "lines": [
+        {
+          "id": "1",
+          "order_line_id": "10",
+          "sku": "micro-pump",
+          "unit": "EA",
+          "quantity": "1",
+          "unit_price": "12.50",
+          "line_total": "12.50"
+        }
+      ],
+      "line_subtotal": "12.50"
+    },
+    "receipts": [
+      {
+        "id": "RECEIPT-DEMO-01",
+        "order_line_id": "10",
+        "unit": "EA",
+        "status": "accepted",
+        "quantity": "3"
+      }
+    ],
+    "seen_invoices": []
+  },
+  "before_line_subtotal": "50.80",
+  "after_line_subtotal": "12.50",
+  "audit": {
+    "status": "ready_for_review",
+    "snapshot_sha256": "c4e3dba65742d05fdc3d338cbb8881ddc9d43e0204f7403dee092f99a0001b3a",
+    "findings": [],
+    "lines": [
+      {
+        "line": "1",
+        "order_line": "10",
+        "permitted_quantity": "1",
+        "agreed_unit_price": "12.50",
+        "sources": [
+          "INV-DEMO-01:1",
+          "PO-DEMO-01:10",
+          "RECEIPT-DEMO-01"
+        ],
+        "repairable": true
+      }
+    ],
+    "rounding": "line_level_decimal_HALF_UP_2_places",
+    "scope": "buyer_supplied_acceptance_contract_only",
+    "official_status_changed": false,
+    "payment_authorized": false
+  },
+  "external_actions": [],
+  "approval_or_execution_performed": false
+}

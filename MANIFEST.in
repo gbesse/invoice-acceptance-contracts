@@ -1,0 +1,5 @@
+include README*.md LICENSE package.json package-lock.json
+recursive-include invoice_contract/web *
+recursive-include invoice_contract/examples *.json
+recursive-include tests *.py *.mjs
+recursive-include .github *.yml
